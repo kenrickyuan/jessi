@@ -1,5 +1,5 @@
 <div class="navbar px-4 d-flex justify-content-between sticky-top" style="height: 60px; background-color: #FE8180;">
-  <%= link_to image_tag('back-arrow.png', height: '22', width: '20'), event_expenses_path(@event) %>
+  <%= link_to image_tag('back-arrow.png', height: '22', width: '20'), :back %>
   <h5 class="mb-0" style="font-weight: bold; color: #472B62">Paying back <%= @expense.guest.name.capitalize %></h5>
   <div style="width: 22px"></div>
 </div>
