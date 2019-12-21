@@ -3,19 +3,19 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.input :question %>
+    <%= f.input :question, input_html: {autocomplete: 'off'} %>
     <hr style="border-width: 6px; background-color: #FE8180;" class="m-0">
     <div id="choices">
       <div class="form-group">
         <label for="1">Option 1</label>
-        <input name="choices[]" type="text" id="1" class="form-control" />
+        <input name="choices[]" type="text" id="1" class="form-control" autocomplete="off" />
       </div>
 
       <hr style="border-width: 4px;" class="m-0">
 
       <div class="form-group">
         <label for="2">Option 2</label>
-        <input name="choices[]" type="text" id="2" class="form-control" />
+        <input name="choices[]" type="text" id="2" class="form-control" autocomplete="off" />
       </div>
       <hr style="border-width: 4px;" class="m-0">
     </div>
