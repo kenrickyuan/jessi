@@ -3,7 +3,7 @@ let g = 2
 const addaNewButton = () => {
   const guest = `<div class="form-group">` +
     `<label for='${g}'>Guest</label>` +
-    `<input name="guests[]" type="text" id="${g}" class="form-control form-group" />` +
+    `<input name="guests[]" type="text" id="${g}" class="form-control form-group" autocomplete="off" />` +
     `</div>` +
     `<hr style="border-width: 4px;" class="m-0">`;
 
