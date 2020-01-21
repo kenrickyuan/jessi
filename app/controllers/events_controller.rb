@@ -64,8 +64,8 @@ class EventsController < ApplicationController
     location = CGI.escape(@event.location)
 
     if @event.start_time.present? && @event.start_time < @event.end_time
-      @link_google = "https://www.addevent.com/dir/?client=aaszNLrTvzxLzJhVOmIz78679&start=#{start_date}&end=#{end_date}&title=#{title}&description=#{description}&location=#{location}&service=google"
-      @link_apple = "https://www.addevent.com/dir/?client=aaszNLrTvzxLzJhVOmIz78679&start=#{start_date}&end=#{end_date}&title=#{title}&description=#{description}&location=#{location}&service=apple"
+      @link_google = "https://www.addevent.com/dir/?client=aBimVzdSwzJBZhEUtmws80704&start=#{start_date}&end=#{end_date}&title=#{title}&description=#{description}&location=#{location}&service=google"
+      @link_apple = "https://www.addevent.com/dir/?client=aBimVzdSwzJBZhEUtmws80704&start=#{start_date}&end=#{end_date}&title=#{title}&description=#{description}&location=#{location}&service=apple"
       @share_message =
       "I created an event with jessi.io!\nClick the links below to push the event to your calendar\n \nApple calendar:\n#{@link_apple}\n \nGoogle calendar:\n#{@link_google}"
     else
