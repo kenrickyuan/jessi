@@ -36,9 +36,9 @@
       <% end %>
     </div>
     <div class="d-flex justify-content-between">
-      <%= image_tag('share.png', height: '25', width: '25', class: "clipboard-btn", onclick: @alert_message, data: { clipboard_action: "copy", clipboard_text: "#{@share_message}" }) %>
+      <%= image_tag('share.png', height: '25', width: '25', class: "clipboard-btn", onclick: @alert_message, data: { clipboard_action: "copy", clipboard_text: @share_message }) %>
       <%= link_to image_tag('edit.png', height: '25', width: '25'), edit_event_path(@event) %>
-      <%= link_to image_tag('delete.png', height: '25', width: '25'), event_path(@event), method: :delete, data: {confirm: "Are you sure?"} %>
+      <%= link_to image_tag('delete.png', height: '25', width: '25'), event_path(@event), method: :delete, data: {confirm: @delete_message } %>
     </div>
   </div>
 

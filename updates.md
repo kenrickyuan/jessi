@@ -1,4 +1,5 @@
 Will put all features or notable bug fixes here.
 
-Jan 21, 2019
--
+Jan 26, 2019
+- When deleting an event with active expenses, the expenses will be deleted first, allowing the event to be deleted.
+- Added warning prompt, telling user that the expenses will be deleted if the event is deleted.

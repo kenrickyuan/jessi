@@ -8,6 +8,7 @@ class EventsController < ApplicationController
 
   def show
     set_event_alert
+    set_delete_alert
     set_event_link
   end
 
@@ -37,6 +38,7 @@ class EventsController < ApplicationController
   end
 
   def destroy
+    @event.expenses.destroy_all
     @event.destroy!
     @events = Event.where(user: current_user.id).order('start_time')
     if @events.empty?
@@ -81,6 +83,14 @@ class EventsController < ApplicationController
       @alert_message = "alert('Your event has no start time! I cannot create a calendar link without it!')"
     else
       @alert_message = "alert('Your event ends before it starts! I cannot create a calendar link for something like that!')"
+    end
+  end
+
+  def set_delete_alert
+    if @event.expenses.empty?
+      @delete_message = "Are you sure?"
+    else
+      @delete_message = "This event still has expenses. If you proceed, these expenses will also be deleted. Are you sure?"
     end
   end
 
