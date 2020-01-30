@@ -10,7 +10,7 @@ class ExpensesController < ApplicationController
   def create
     @expense = Expense.new(expense_params)
     @expense.event_id = @event.id
-    if @expense.save!
+    if @expense.save
       @event.guests.each do |guest|
         next if guest.id == @expense.guest_id
 

@@ -14,7 +14,6 @@ class GuestsController < ApplicationController
 
   def create
     guests = params[:guests]
-
     @errors = []
     guests.each do |guest|
       @guest = Guest.new(name: guest, event: @event)

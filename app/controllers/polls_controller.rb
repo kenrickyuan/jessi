@@ -59,8 +59,7 @@ class PollsController < ApplicationController
     @poll.link = response.parsed_response["_links"]["display"]
     @poll.typeform_id = response.parsed_response["id"]
     respond_to do |format|
-      if @poll.save!
-
+      if @poll.save
         format.html { redirect_to event_polls_path(@event), notice: 'Poll was successfully created.' }
       else
         format.html { render :new }

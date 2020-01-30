@@ -22,7 +22,7 @@ class EventsController < ApplicationController
     guest1 = Guest.new(name: current_user.name, event: @event)
     guest1.save!
 
-    if @event.save!
+    if @event.save
       redirect_to event_path(@event)
     else
       render :new

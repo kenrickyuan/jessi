@@ -14,7 +14,7 @@ class TransactionsController < ApplicationController
     @transaction.expense_id = @expense.id
     @transaction.payee = @expense.guest
     @transaction.payer = Guest.find(params[:transaction][:payer_id].to_i)
-    if @transaction.save!
+    if @transaction.save
       redirect_to event_expense_path(@event, @expense)
     else
       render :new
